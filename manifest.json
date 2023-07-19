@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "HA719 Editor",
+    "description": "some desc here",
+    "version": "1.0.0",
+    "icons": {
+        "16": "img/icon-16.png",
+        "32": "img/icon-32.png",
+        "48": "img/icon-48.png",
+        "128": "img/icon-128.png"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "permissions": [
+        "contextMenus",
+        "activeTab"
+    ]
+}
