@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "HA719 Editor",
-    "description": "some desc here",
+    "description": "HA719 Editor",
     "version": "1.0.0",
     "icons": {
         "16": "img/icon-16.png",
@@ -15,7 +15,24 @@
         ]
     },
     "permissions": [
+        "<all_urls>",
         "contextMenus",
-        "activeTab"
+        "activeTab",
+        "tabs",
+        "notifications"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content_script.js"
+            ],
+            "css": [
+                "content_style.css"
+            ],
+            "run_at": "document_end"
+        }
     ]
 }
