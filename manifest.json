@@ -11,7 +11,7 @@
     },
     "background": {
         "scripts": [
-            "background.js"
+            "js/background.js"
         ]
     },
     "permissions": [
@@ -27,10 +27,10 @@
                 "<all_urls>"
             ],
             "js": [
-                "content_script.js"
+                "js/content_script.js"
             ],
             "css": [
-                "content_style.css"
+                "css/content_style.css"
             ],
             "run_at": "document_end"
         }
