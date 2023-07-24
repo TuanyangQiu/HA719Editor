@@ -2,20 +2,13 @@ chrome.contextMenus.create({
   type: "normal",
   title: "Get CSS Styles",
   contexts: ["link", "selection"],
-  id: "getLinkInfo",
+  id: "getCssInfo",
+  onclick: function (info, tab) {
+    chrome.tabs.sendMessage(tab.id, { action: "getCssInfo" });
+  }
 
 },
-  function() { });
-
-chrome.contextMenus.onClicked.addListener(function (info, tab) {
-
-  if (info.menuItemId === "getLinkInfo") {
-    console.log('clicked getLinkInfo');
-      
-    
-    chrome.tabs.sendMessage(tab.id, { action: "getLinkInfo" });
-  }
-});
+  function () { });
 
 //Listen the click event on the extension icon,
 //then display the page in a new tab
