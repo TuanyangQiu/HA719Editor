@@ -1,56 +1,56 @@
 {
-    "manifest_version": 3,
-    "name": "HA719 Editor",
-    "description": "HA719 Editor",
-    "version": "1.0.0",
-    "action": {
-        "default_icon": "img/icon-128.png"
-    },
-    "icons": {
-        "16": "img/icon-16.png",
-        "32": "img/icon-32.png",
-        "48": "img/icon-48.png",
-        "128": "img/icon-128.png"
-    },
-    "permissions": [
-        "scripting",
-        "tabs",
-        "background",
-        "contextMenus",
-        "windows",
-        "storage",
-        "unlimitedStorage"
-    ],
-    "background": {
-      "service_worker": "js/background.js"
-    },
-    "host_permissions": [
-      "https://*/*",
-      "http://*/*"
-    ],
-    "optional_permissions": [
-      "downloads"
-    ],
-    "content_scripts": [
-      {
-        "run_at": "document_end",
-        "matches": [
-          "https://*/*",
-          "http://*/*"
-        ],
-        "css": [],
-        "js": [
-          "js/content_script.js"
-        ]
-      }
-    ],
-    "web_accessible_resources": [
-      {
-        "resources": [],
-        "matches": [
-          "https://*/*",
-          "http://*/*"
-        ]
-      }
-    ]
-  }
+  "manifest_version": 3,
+  "name": "HA719 Editor",
+  "description": "HA719 Editor",
+  "version": "1.0.0",
+  "action": {
+    "default_icon": "img/icon-128.png"
+  },
+  "icons": {
+    "16": "img/icon-16.png",
+    "32": "img/icon-32.png",
+    "48": "img/icon-48.png",
+    "128": "img/icon-128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs",
+    "contextMenus",
+    "windows",
+    "storage",
+    "unlimitedStorage"
+  ],
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "optional_permissions": [
+    "downloads"
+  ],
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ],
+      "css": [],
+      "js": [
+        "js/content_script.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [],
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ]
+    }
+  ]
+}
