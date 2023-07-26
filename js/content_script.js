@@ -26,13 +26,12 @@ chrome.runtime.onMessage.addListener(function (message) {
     var e = document.elementFromPoint(posX, poxY);
     var xp = getXPath(e);
     var style = getCssStyles(xp);
-    console.log("text = " + style.textContent);
-    console.log("style.color=" + style.color);
-    console.log("style.fontsize=" + style.fontSize);
+   
 
     sendMessage({
       action: "send-to-popup",
       text: style.textContent,
+      clickInfo: message.clickInfo,
       style: {
         color: style.color,
         fontSize: style.fontSize,
