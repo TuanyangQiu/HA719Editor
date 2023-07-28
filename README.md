@@ -12,3 +12,8 @@ One of the core features of this tool is its user-friendliness, as authors won't
 
 ## Prerequisites
 - Chrome 88 or higher version, Firefox 109 or higher version
+- npm 
+- install npm packages
+```
+npm install
+```
