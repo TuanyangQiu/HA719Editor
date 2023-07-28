@@ -1,0 +1,16 @@
+{
+  "name": "ha719editor",
+  "version": "1.0.0",
+  "description": "The motivation behind developing this Chrome extension is rooted in a personal experience I had while learning AWS a few months ago. During the learning process, I encountered inconsistencies between the tutorial documents and the actual content on the web pages. For instance, the tutorial might instruct users to click on a button named 'Start,' but in reality, that button either didn't exist or had been renamed. This confusion not only affected me but also impacted other beginners.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.7.0",
+    "selenium-webdriver": "^4.10.0"
+  }
+}
