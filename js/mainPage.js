@@ -35,18 +35,30 @@ chrome.runtime.onMessage.addListener((message) => {
 
 
     $('#saveSelectionChanges').unbind('click').click(function () {
+      var rules = null;
+      var index = 0;
       $('#SelectionBoxContent input[type=checkbox]:checked').each(function () {
         var checkBoxId = $(this).attr('id');
         var checkBoxValue = $(this).val();
 
         if (checkBoxId)
           checkBoxId = checkBoxId.substring(9);//remove checkbox- from id
-
+        index++;
+        var temp = `<tr>
+          <td><input type="checkbox"></td>
+          <td>${index}</td>
+          <td>something here</td>
+          <td>https://wwww.abc.com/?q=100&v=a</td>
+        </tr>`;
+        rules = rules + temp;
         console.log(`style = ${checkBoxId}, value = ${checkBoxValue}`);
 
       });
 
       $('#stylesSelectionBox').modal('hide');
+
+      if (rules)
+        $('#validationRulesTable').html(rules);
     });
 
 
