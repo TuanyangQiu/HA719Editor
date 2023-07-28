@@ -83,4 +83,9 @@ document.addEventListener('DOMContentLoaded', async function () {
     theme: 'snow'
   });
 
+  $('#testSelenium').on('click', function () {
+
+    console.log('start testing selenium...');
+  })
+
 });
